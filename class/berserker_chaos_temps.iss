@@ -3,7 +3,7 @@ function main()
 	OgreBotAtom aExecuteAtom ${Me.Name} a_QueueCommand ChangeCastStackListBoxItem "Chaos" FALSE TRUE
 	while 1
 	{
-		while ${Me.InCombat}==TRUE && ${Me.Ability[Rampager's Resilience].TimeUntilReady} >= 0
+		while ${Me.InCombat}==TRUE && ${Me.Ability["Rampager's Resilience"].TimeUntilReady} >= 0
 		{
 			if ${Me.Ability[Battle Frenzy].TimeUntilReady} >= 10
 			{
