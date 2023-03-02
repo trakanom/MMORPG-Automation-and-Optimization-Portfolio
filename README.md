@@ -1,2 +1,4 @@
 # EQ2-Raid-Scripts
-old scripts for Everquest II, written in LavishScript with a focus on multi-agent control systems and behavioral strategies.
+Raid scripts for Everquest II
+Written in LavishScript between 2013 and 2017
+Focused on multi-agent control systems and behavioral strategies
