@@ -2,9 +2,13 @@
 This repository showcases a collection of scripts, configurations, and spreadsheets aimed at optimizing character performance, automating gameplay tasks, and improving the overall EverQuest II gaming experience. These resources have been instrumental in providing clients with efficiently optimized profiles, prescriptive analysis, and best practices for character progression.
 
 ## Contents
+
 `spreadsheets`: A folder containing spreadsheets for character performance analysis, class compatibility, and client progression.
+
 `class`: A folder containing class-specific scripts and configurations to enhance and automate gameplay for various classes.
+
 `encounters`: A folder containing encounter-specific scripts to assist with in-game mechanics and strategies.
+
 `utility`: A folder containing utility scripts to automate and streamline various gameplay tasks and processes.
 ## Usage
 Not recommended.
