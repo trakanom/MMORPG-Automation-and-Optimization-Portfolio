@@ -7,13 +7,13 @@ This repository showcases a collection of scripts, configurations, and spreadshe
 `encounters`: A folder containing encounter-specific scripts to assist with in-game mechanics and strategies.
 `utility`: A folder containing utility scripts to automate and streamline various gameplay tasks and processes.
 ## Usage
-To use these resources, download the desired files and follow the instructions provided in their respective README.md files. Please note that these resources are based on data and knowledge available up until September 2021, and updates or changes to the game after this date may not be reflected.
+Not recommended.
 
 ## Spreadsheets
 Open the spreadsheets with your preferred spreadsheet software (e.g., Microsoft Excel or Google Sheets). Modify the input fields according to your character's attributes or specific scenario, and the spreadsheet will automatically update its calculations to provide recommendations and insights.
 
 ## Scripts and Configurations
-Copy the desired script or configuration file into the appropriate folder or location within your EverQuest II installation. Consult the in-game documentation or relevant community resources for specific installation and usage instructions.
+Copy the desired script or configuration file into the appropriate folder or location within your ISXEQ2 installation. Consult the lavishscript documentation or relevant community resources for specific installation and usage instructions.
 
 ## Contributions
 Feel free to suggest improvements or report issues by opening an issue or submitting a pull request. Contributions are welcome and appreciated.
