@@ -1,0 +1,129 @@
+#event OutOfStuff "Sorry, but you don't have everything you need for this recipe in your general inventory." 
+#event TrivSkill "You can no longer advance your skill from making this item." 
+#event BakSkillUp  "#*#You have become better at Baking#*#"
+#event BSSkillUp  "#*#You have become better at Blacksmithing#*#"
+#event BreSkillUp  "#*#You have become better at Brewing#*#"
+#event FleSkillUp  "#*#You have become better at Fletching#*#"
+#event JCSkillUp  "#*#You have become better at Jewelry Making#*#"
+#event PotSkillUp  "#*#You have become better at Pottery#*#"
+#event TaiSkillUp  "#*#You have become better at Tailoring#*#"
+
+| Usage: /mac combinetriv
+| Use 1 or 0 (or nothing, it'll default to 0) for StopTriv to stop creating at the trivial point for recipes.  Great for leveling up
+| You will end up making a last item at trivial, just because of how we parse the chat messages looking for the trivial message.
+  
+Sub Main
+
+	:Loop
+	/doevents	
+	 
+	:ClearCursor 
+	/if (${Cursor.ID}) { 
+		/autoinventory 
+		/goto :ClearCursor 
+	} 
+	 
+	/notify TradeskillWnd CombineButton leftmouseup 
+|	/doevents 
+	/delay 6
+	/if (${Select[${Cursor.ID},16919,16925,16933,8238,21612,21614,9685,9686,10269,3061,3059,21620]}>0) /destroy
+	/if (${Cursor.ID}==21621 || ${Cursor.ID}==21620 || ${Cursor.ID}==21614 || ${Cursor.ID}==9686) {
+		/destroy
+	}
+	/delay 3
+	/autoinventory
+	/delay 1
+	/goto :Loop 
+/return 
+ 
+Sub Event_OutOfStuff
+	/g Ending Macro, Out of Materials
+	/call Event_Exit 
+/return
+
+Sub Event_TrivSkill
+	/g Ending Macro, Trivial Reached
+	/call Event_Exit
+/return
+
+Sub Event_Exit
+	:ClearCursorEnd 
+	/if (${Cursor.ID}) { 
+		/autoinventory 
+		/goto :ClearCursorEnd
+	}
+	/clean
+	/endmacro
+/return
+
+| --------------------------------------------------------------------------------------------
+| SUB: Event_BakSkillUp
+| --------------------------------------------------------------------------------------------
+	Sub Event_BakSkillUp
+	/if (${Me.Skill[Baking]}>=300) {
+		/g Ending Macro, 300 Baking Reached!
+		/call Event_Exit
+	}
+	/return
+
+| --------------------------------------------------------------------------------------------
+| SUB: Event_BSSkillUp
+| --------------------------------------------------------------------------------------------
+	Sub Event_BSSkillUp
+	/if (${Me.Skill[Blacksmithing]}>=300) {
+		/g Ending Macro, 300 Blacksmithing Reached!
+		/call Event_Exit
+	}
+	/return
+	
+| --------------------------------------------------------------------------------------------
+| SUB: Event_BreSkillUp
+| --------------------------------------------------------------------------------------------
+	Sub Event_BreSkillUp
+	/if (${Me.Skill[Brewing]}>=300) {
+		/g Ending Macro, 300 Brewing Reached!
+		/call Event_Exit
+	}
+	/return
+	
+| --------------------------------------------------------------------------------------------
+| SUB: Event_FleSkillUp
+| --------------------------------------------------------------------------------------------
+	Sub Event_FleSkillUp
+	/if (${Me.Skill[Fletching]}>=300) {
+		/g Ending Macro, 300 Fletching Reached!
+		/call Event_Exit
+	}
+	/return
+	
+| --------------------------------------------------------------------------------------------
+| SUB: Event_JCSkillUp
+| --------------------------------------------------------------------------------------------
+	Sub Event_JCSkillUp
+	/if (${Me.Skill[Jewelry Making]}>=300) {
+		/g Ending Macro, 300 Jewelry Making Reached!
+		/call Event_Exit
+	}
+	/return
+	
+| --------------------------------------------------------------------------------------------
+| SUB: Event_PotSkillUp
+| --------------------------------------------------------------------------------------------
+	Sub Event_PotSkillUp
+	/if (${Me.Skill[Pottery]}>=300) {
+		/g Ending Macro, 300 Pottery Reached!
+		/call Event_Exit
+	}
+	/return
+	
+| --------------------------------------------------------------------------------------------
+| SUB: Event_TaiSkillUp
+| --------------------------------------------------------------------------------------------
+	Sub Event_TaiSkillUp
+	/if (${Me.Skill[Tailoring]}>=300) {
+		/g Ending Macro, 300 Tailoring Reached!
+		/call Event_Exit
+	}
+	/return
+	
+
